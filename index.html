@@ -2105,6 +2105,9 @@ html,body,#stage,#screen{touch-action:manipulation}
 .igdv-who{flex:1;min-width:0;display:flex;align-items:center;gap:10px;cursor:pointer}
 /* 스토리: 화면이 짧으면 사진 칸을 아래 입력창 위까지만 (글·사진이 입력창에 안 가려지게) */
 .igsv{container-type:size}
+/* 알림센터·잠금화면 알림: 알림이 많아도 한 줄씩 납작해지지 않게 (넘치면 스크롤) */
+.nc-list>*,.lk-notes>*{flex-shrink:0}
+.lk-notes{max-height:calc(100% - 275px - var(--safe-b) - 100px);overflow-y:auto;scrollbar-width:none}.lk-notes::-webkit-scrollbar{display:none}
 .igsv-c{aspect-ratio:auto;width:100%;height:calc(100% - var(--sb) - var(--safe-b) - 60px);height:min(calc(100cqw * 16 / 9),calc(100cqh - var(--sb) - var(--safe-b) - 60px))}
 </style>
 </head>
